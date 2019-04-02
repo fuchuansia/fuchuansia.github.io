@@ -123,16 +123,16 @@
     <div id="root"></div>
 
     <script>
-      const renderBtn = document.querySelector("#render");
-      const urlInput = document.querySelector("#url");
+      var renderBtn = document.getElementById("render");
+      var urlInput = document.getElementById("url");
 
-      renderBtn.onclick = () => {
+      renderBtn.onclick = function() {
         if (urlInput.value) {
           window.render({
             url: "ws://127.0.0.1:7777?id=" + urlInput.value
-          });
+          })
         } else {
-          window.render();
+          window.render()
         }
       };
     </script>
